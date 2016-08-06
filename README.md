@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# VendoCelular
+Plataforma de clasificados donde podras vender tus dispositivos electronicos
+>>>>>>> d3588e3397bcff1ef07e26e2c6fef4abeb7cfaf3
