@@ -38,6 +38,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :uid
       t.string :provider
 
+      #Estado de cuenta
+      t.string :status
+
       t.timestamps null: false
     end
 

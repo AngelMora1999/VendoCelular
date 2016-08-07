@@ -1,0 +1,51 @@
+# == Schema Information
+#
+# Table name: ads
+#
+#  id          :integer          not null, primary key
+#  title       :string
+#  description :text
+#  brand       :string
+#  price       :integer
+#  visit_count :integer
+#  region      :string
+#  city        :string
+#  cellphone   :string
+#  phone       :string
+#  adress      :string
+#  status      :string
+#  type        :string
+#  user_id     :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  price: 1
+  region: MyString
+  city: MyString
+  cellphone: MyString
+  phone: MyString
+  adress: MyString
+  brand: MyString
+  visit_count: MyString
+  type: 
+  status: MyString
+
+two:
+  title: MyString
+  description: MyText
+  price: 1
+  region: MyString
+  city: MyString
+  cellphone: MyString
+  phone: MyString
+  adress: MyString
+  brand: MyString
+  visit_count: MyString
+  type: 
+  status: MyString

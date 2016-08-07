@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806221609) do
+ActiveRecord::Schema.define(version: 20160807013102) do
+
+  create_table "ads", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "brand"
+    t.integer  "price"
+    t.integer  "visit_count"
+    t.string   "region"
+    t.string   "city"
+    t.string   "cellphone"
+    t.string   "phone"
+    t.string   "adress"
+    t.string   "status"
+    t.string   "type"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_ads_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -26,6 +45,7 @@ ActiveRecord::Schema.define(version: 20160806221609) do
     t.string   "name",                   default: "", null: false
     t.string   "uid"
     t.string   "provider"
+    t.string   "status"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true

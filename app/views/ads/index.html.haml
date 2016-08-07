@@ -1,0 +1,45 @@
+%h1 Listing ads
+
+%table
+  %thead
+    %tr
+      %th User
+      %th Title
+      %th Description
+      %th Price
+      %th Region
+      %th City
+      %th Cellphone
+      %th Phone
+      %th Adress
+      %th Brand
+      %th Visit count
+      %th Type
+      %th Status
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ads.each do |ad|
+      %tr
+        %td= ad.user.id
+        %td= ad.title
+        %td= ad.description
+        %td= ad.price
+        %td= ad.region
+        %td= ad.city
+        %td= ad.cellphone
+        %td= ad.phone
+        %td= ad.adress
+        %td= ad.brand
+        %td= ad.visit_count
+        %td= ad.type
+        %td= ad.status
+        %td= link_to 'Show', ad
+        %td= link_to 'Edit', edit_ad_path(ad)
+        %td= link_to 'Destroy', ad, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ad', new_ad_path

@@ -1,0 +1,45 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @ad.user.id
+%p
+  %b Title:
+  = @ad.title
+%p
+  %b Description:
+  = @ad.description
+%p
+  %b Price:
+  = @ad.price
+%p
+  %b Region:
+  = @ad.region
+%p
+  %b City:
+  = @ad.city
+%p
+  %b Cellphone:
+  = @ad.cellphone
+%p
+  %b Phone:
+  = @ad.phone
+%p
+  %b Adress:
+  = @ad.adress
+%p
+  %b Brand:
+  = @ad.brand
+%p
+  %b Visit count:
+  = @ad.visit_count
+%p
+  %b Type:
+  = @ad.type
+%p
+  %b Status:
+  = @ad.status
+
+= link_to 'Edit', edit_ad_path(@ad)
+\|
+= link_to 'Back', ads_path
