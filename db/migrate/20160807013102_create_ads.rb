@@ -16,6 +16,7 @@ class CreateAds < ActiveRecord::Migration[5.0]
       t.string :adress
 
       #Estado de las Ads
+      t.string :state
       t.string :status
       t.string :type
 

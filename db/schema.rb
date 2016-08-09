@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160807013102) do
     t.string   "cellphone"
     t.string   "phone"
     t.string   "adress"
+    t.string   "state"
     t.string   "status"
     t.string   "type"
     t.integer  "user_id"
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(version: 20160807013102) do
     t.string   "name",                   default: "", null: false
     t.string   "uid"
     t.string   "provider"
+    t.integer  "permission_level",       default: 1
     t.string   "status"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false

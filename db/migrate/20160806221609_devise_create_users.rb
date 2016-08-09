@@ -39,6 +39,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :provider
 
       #Estado de cuenta
+      t.integer :permission_level, default: 1
       t.string :status
 
       t.timestamps null: false
