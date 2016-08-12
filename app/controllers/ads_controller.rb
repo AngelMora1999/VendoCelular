@@ -10,11 +10,13 @@ class AdsController < ApplicationController
   # GET /ads/1
   # GET /ads/1.json
   def show
+    @ad.update_visits_count
   end
 
   # GET /ads/new
   def new
     @ad = Ad.new
+    @categories = Category.all
   end
 
   # GET /ads/1/edit
@@ -24,8 +26,8 @@ class AdsController < ApplicationController
   # POST /ads
   # POST /ads.json
   def create
-    @ad = Ad.new(ad_params)
-
+    @ad = current_user.ads.new(ad_params)
+    @ad.categories = params[:categories]
     respond_to do |format|
       if @ad.save
         format.html { redirect_to @ad, notice: 'Ad was successfully created.' }
@@ -69,6 +71,6 @@ class AdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ad_params
-      params.require(:ad).permit(:title, :description, :price, :region, :city, :cellphone, :phone, :adress, :brand, :visit_count, :type, :status, :user_id)
+      params.require(:ad).permit(:title, :description, :price, :region, :city, :cellphone, :phone, :adress, :brand, :visit_count, :type, :status, :categories)
     end
 end

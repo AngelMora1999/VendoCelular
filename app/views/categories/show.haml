@@ -1,0 +1,7 @@
+%p
+	%h1 Name:
+	= @category.name
+- @category.ads.each do |ad|
+	= ad.title
+	= ad.description
+	= ad.price

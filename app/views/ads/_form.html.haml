@@ -5,10 +5,6 @@
       %ul
         - @ad.errors.full_messages.each do |msg|
           %li= msg
-  
-  .field
-    = f.label :user_id
-    = f.text_field :user_id
   .field
     = f.label :title
     = f.text_field :title
@@ -45,5 +41,11 @@
   .field
     = f.label :status
     = f.text_field :status
+  %div
+    %label Categories:
+    - @categories.each do |category|
+      %div.field
+        = check_box_tag "categories[]", category.id 
+        =category.name
   .actions
     = f.submit 'Save'

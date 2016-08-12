@@ -39,6 +39,11 @@
 %p
   %b Status:
   = @ad.status
+%p
+  %b Categories:
+  - @ad.categories.each do |category|
+    %li
+      =category.name
 
 = link_to 'Edit', edit_ad_path(@ad)
 \|
