@@ -16,6 +16,7 @@
 #  name                   :string           default(""), not null
 #  uid                    :string
 #  provider               :string
+#  permission_level       :integer          default(1)
 #  status                 :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
