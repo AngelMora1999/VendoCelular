@@ -33,9 +33,6 @@
     = f.label :adress
     = f.text_field :adress
   .field
-    = f.label :visit_count
-    = f.text_field :visit_count
-  .field
     = f.label :type
     = f.text_field :type
   .field
@@ -45,7 +42,7 @@
     %label Categories:
     - @categories.each do |category|
       %div.field
-        = check_box_tag "categories[]", category.id 
-        =category.name
+        = check_box_tag "categories[]", category.id
+        = category.name
   .actions
     = f.submit 'Save'

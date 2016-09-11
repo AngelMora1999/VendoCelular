@@ -1,45 +1,16 @@
-%h1 Listing ads
+.rox.around-xs
+  - @ads.each do |ad|
+    .demo-card-square.mdl-card.mdl-shadow--2dp
+      .box
+        .mdl-card__title.mdl-card--expand
+          %h2.mdl-card__title-text
+            =link_to "#{ad.title}", ad
+          %h2.mdl-card__title-text
+            $
+            = ad.price
+        .mdl-card__supporting-text
+          = ad.description
+        .mdl-card__actions.mdl-card--border
+          %a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect
+            Ver Mas
 
-%table
-  %thead
-    %tr
-      %th User
-      %th Title
-      %th Description
-      %th Price
-      %th Region
-      %th City
-      %th Cellphone
-      %th Phone
-      %th Adress
-      %th Brand
-      %th Visit count
-      %th Type
-      %th Status
-      %th
-      %th
-      %th
-
-  %tbody
-    - @ads.each do |ad|
-      %tr
-        %td= ad.user.id
-        %td= ad.title
-        %td= ad.description
-        %td= ad.price
-        %td= ad.region
-        %td= ad.city
-        %td= ad.cellphone
-        %td= ad.phone
-        %td= ad.adress
-        %td= ad.brand
-        %td= ad.visit_count
-        %td= ad.type
-        %td= ad.status
-        %td= link_to 'Show', ad
-        %td= link_to 'Edit', edit_ad_path(ad)
-        %td= link_to 'Destroy', ad, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Ad', new_ad_path

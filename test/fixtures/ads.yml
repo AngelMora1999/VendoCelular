@@ -13,6 +13,7 @@
 #  cellphone   :string
 #  phone       :string
 #  adress      :string
+#  state       :string
 #  status      :string
 #  type        :string
 #  user_id     :integer

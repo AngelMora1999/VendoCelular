@@ -1,0 +1,27 @@
+<header>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Vendo Electrónico</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><%= link_to "Ultimos Anuncios", ads_path, class:"mdl-navigation__link"%></li>
+          <li><%= link_to "Categorias", categories_path, class:"mdl-navigation__link"%></li>
+          <li><%= link_to "Vender ya!", new_ad_path, class:"mdl-navigation__link"%></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "Cerrar Sessión", destroy_user_session_path, method: :delete, class: "mdl-navigation__link" %></li>
+          <%else%>
+            <li><%= link_to "Registrarme", new_user_registration_path, class:"mdl-navigation__link"%></li>
+            <li><%= link_to "Iniciar Sesión", new_user_session_path, class:"mdl-navigation__link"%></li>
+          <%end%>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">Javascript</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
